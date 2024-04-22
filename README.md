@@ -156,18 +156,45 @@ else
 counter_output <= 0;
 end
 endmodule
+UP-DOWN COUNTER
+
+VERILOG CODE:
+
+module updown_counter(clk,rst,updown,out);
+input clk,rst,updown;
+output reg [3:0]out;
+always@(posedge clk)
+begin
+if (rst==1)
+out=4'b0000;
+else if(updown==1)
+out=out+1;
+else
+out=out-1;
+end
+endmodule
 OUTPUT WAVEFORM
 
 D Flip Flop
 322413931-0aeeb1ce-64b7-48e0-bcbd-efbf6bf0010d
 
+320558323-8662d8bf-2960-4624-adc8-6df6b2b29437
 JK Flip flop
 322414053-f58c6b39-81b3-400f-b2e6-5df43dd4f4ce
 
+320563598-5b3ec235-00fc-4f84-b61e-0c457642569d
 SR Flip Flop
 322414218-c3f2b9c5-897f-48ef-b12d-2f446de70cb8
 
+320568802-5c626c90-315c-48e0-9de3-fe3c4f87bc06
 T Flip FLop
 322414353-5bae902d-bc9e-48f1-b32c-fdb06441a797
 
+320570273-19d226fa-5bfd-4fe0-9726-3cdfe7d0aa5b
+MOD-10 COUNTER
+320565050-c71dd581-83a7-4c0a-8486-49c17fde037f 320565249-7dd5026a-585c-40d0-9bff-53ba0834976f
+RIPPLE CARRY COUNTER
+320566559-c6c79543-f800-467a-81d7-eb7e67d14cbc 320566810-01c95bee-1816-4bb8-bd36-42e3c49ceea4
+UP DOWN COUNTER
+320571905-eaf2a2ee-935c-457b-92e3-aa92be0c017c 320572212-f2772b2a-196d-4b24-871c-5f153ef91116
 RESULT: Thus the simulation and implementation of sequential logic gates is done and verified.
